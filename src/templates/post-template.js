@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import Seo from '../../components/seo';
+import Seo from '../components/seo';
 
 const Page = ({
   data: {
