@@ -1,0 +1,36 @@
+{
+  "name": "gatsby-head-api-mdx",
+  "version": "1.0.0",
+  "description": "Example repo for using the Gatsby Head API with MDX",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulieScanlon/gatsby-head-api-mdx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulieScanlon/gatsby-head-api-mdx/issues"
+  },
+  "homepage": "https://github.com/PaulieScanlon/gatsby-head-api-mdx#readme",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^4.19.2",
+    "gatsby-plugin-mdx": "^3.19.0",
+    "gatsby-plugin-react-helmet": "^5.19.0",
+    "gatsby-source-filesystem": "^4.19.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
+  }
+}
