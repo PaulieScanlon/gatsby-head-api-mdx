@@ -16,7 +16,6 @@ const Page = ({
 }) => {
   return (
     <Fragment>
-      <Seo title={title} />
       <Link to="/">Back</Link>
       <main>
         <h1>{title}</h1>
@@ -40,3 +39,13 @@ export const query = graphql`
 `;
 
 export default Page;
+
+export const Head = ({
+  data: {
+    mdx: {
+      frontmatter: { title }
+    }
+  }
+}) => {
+  return <Seo title={title} />;
+};

@@ -6,7 +6,6 @@ import Seo from '../components/seo';
 const Page = () => {
   return (
     <Fragment>
-      <Seo title="Gatsby Head API MDX" />
       <main>
         <h1>Index</h1>
         <ul>
@@ -29,3 +28,7 @@ const Page = () => {
 };
 
 export default Page;
+
+export const Head = () => {
+  return <Seo title="Gatsby Head API MDX" />;
+};
