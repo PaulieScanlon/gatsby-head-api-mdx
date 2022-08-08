@@ -4,7 +4,7 @@
   "description": "Example repo for using the Gatsby Head API with MDX",
   "main": "index.js",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 3000",
     "build": "gatsby build",
     "clean": "gatsby clean",
     "serve": "gatsby serve",

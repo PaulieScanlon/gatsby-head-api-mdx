@@ -35,6 +35,11 @@ export const query = graphql`
       }
       body
     }
+    site {
+      siteMetadata {
+        description
+      }
+    }
   }
 `;
 
@@ -44,8 +49,11 @@ export const Head = ({
   data: {
     mdx: {
       frontmatter: { title }
+    },
+    site: {
+      siteMetadata: { description }
     }
   }
 }) => {
-  return <Seo title={title} />;
+  return <Seo title={title} description={description} />;
 };
