@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 
-import Seo from '../../components/seo';
+import Seo from '../components/seo';
 
 const Page = ({
   data: {
@@ -16,7 +16,6 @@ const Page = ({
 }) => {
   return (
     <Fragment>
-      <Seo title={title} />
       <Link to="/">Back</Link>
       <main>
         <h1>{title}</h1>
@@ -36,7 +35,27 @@ export const query = graphql`
       }
       body
     }
+    site {
+      siteMetadata {
+        description
+      }
+    }
   }
 `;
 
 export default Page;
+
+export const Head = ({
+  data: {
+    mdx: {
+      frontmatter: { title }
+    },
+    site: {
+      siteMetadata: { description }
+    }
+  }
+}) => {
+  console.log(description);
+
+  return <Seo title={title} description={description} />;
+};

@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 
-const Seo = ({ title }) => {
+const Seo = ({ title, description }) => {
   return (
-    <Helmet>
+    <Fragment>
       <title>{title}</title>
-    </Helmet>
+      {description ? <meta name="description" content={description} /> : null}
+    </Fragment>
   );
 };
 
 Seo.propTypes = {
   /** The HTML title */
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  /** The HTML description */
+  description: PropTypes.string
 };
 
 export default Seo;
